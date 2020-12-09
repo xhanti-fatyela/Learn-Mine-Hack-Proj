@@ -1,0 +1,99 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/theBackground.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.row {
+	display: flex;
+	height: 88%;
+	align-items: center;
+	color: white;
+}
+
+.col {
+	flex-basis: 50%;
+}
+
+h1 {
+	color: white;
+	font-size: 50px;
+}
+
+p {
+	color: white;
+	font-size: 25px;
+	line-height: 15px;
+}
+
+button {
+	width: 180px;
+	color: #000;
+	font-size: 12px;
+	padding: 12px 0;
+	background: white;
+	border: 0px;
+	border-radius: 20px;
+	outline: none;
+	margin-top: 30px;
+}
+
+.card {
+	width: 250px;
+	height: 300px;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 25px 35px;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin: 20px 35px;
+	background-position: center;
+	background-size: cover;
+	transition: transform 0.8s;
+}
+
+.card1 {
+	background-image: url(/images/SothoLogo.jpg);
+}
+
+.card2 {
+	background-image: url(/images/Venda\ Logo.jpg);
+}
+
+.card3 {
+	background-image: url(/images/XhosaLogo.jpg);
+}
+
+.card4 {
+	background-image: url(/images/ZulLogo.jpg);
+}
+
+.card:hover {
+	transform: translateY(-15px);
+}
+
+h5 {
+	color: black;
+	text-shadow: 0 0 5px #999;
+	font-size: 20px;
+}
+
+.card p {
+	color: rgb(0, 0, 0);
+	text-shadow: 0 0 15px #999;
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+a {
+	color: black;
+}
