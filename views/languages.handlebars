@@ -1,28 +1,89 @@
 <div class="content" style="color: black;">
-    <p>Hello Lilitha, please listen to the audios below before you start!</p>
-    <div class="audio" style="display: flex;">
-        <label for="">
-            <h3>Sesotho - Dumelang</h3>
-            <audio src="/audio/Dumelang.m4a" controls>Sesotho</audio>
-        </label>
-        <label for="">
-            <h3>IsiXhosa - Molo</h3>
-            <audio src="/audio/Molo.m4a" controls type="audio/m4a">IsiXhosa</audio>
-        </label>
-        <label for="">
-            <h3>Venda - Ndaa</h3>
-            <audio src="/audio/Venda.m4a" controls type="audio/m4a">Venda</audio>
-        </label>
+
+    <div class="level levelOne hidden">
+        <h2>Level One</h2>
+        <p>Hello, please listen to the audios below before you start with level one!</p>
+        <div class="audio">
+            <label for="">
+                <h3>Sesotho - Dumelang</h3>
+                <audio src="/audio/Dumelang.m4a" controls>Sesotho</audio>
+            </label>
+            <label for="">
+                <h3>IsiXhosa - Molo</h3>
+                <audio src="/audio/Molo.m4a" controls type="audio/m4a">IsiXhosa</audio>
+            </label>
+            <label for="">
+                <h3>Venda - Ndaa</h3>
+                <audio src="/audio/Venda.m4a" controls type="audio/m4a">Venda</audio>
+            </label>
+        </div>
+        <div>
+            <span class="counter"></span>
+        </div>
     </div>
 
-    <div>Greet</div>
+
+    <div class="level levelTwo hidden">
+        <h2>Level Two</h2>
+        <p>Hello, please listen to the audios below before you start with level two!</p>
+
+        <div class="audio">
+            <label for="">
+                <h3>Sesotho - Le Kae</h3>
+                <audio src="/audio/Lekae.m4a" controls>Sesotho</audio>
+            </label>
+            <label for="">
+                <h3>IsiXhosa - Unjani</h3>
+                <audio src="/audio/Unjani.m4a" controls type="audio/m4a">IsiXhosa</audio>
+            </label>
+            <label for="">
+                <h3>Venda - Who Vuwa</h3>
+                <audio src="/audio/Who.m4a" controls type="audio/m4a">Venda</audio>
+            </label>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="level levelThree hidden">
+        <h2>Level Three</h2>
+        <p>Hello, please listen to the audios below before you start with level three!</p>
+
+        <div class="audio">
+            <label for="">
+                <h3>Sesotho - Letsatsi le monate</h3>
+                <audio src="/audio/Letsatsi.m4a" controls>Sesotho</audio>
+            </label>
+            <label for="">
+                <h3>IsiXhosa - Ube nemini emnandi</h3>
+                <audio src="/audio/emnandi.m4a" controls type="audio/m4a">IsiXhosa</audio>
+            </label>
+            <label for="">
+                <h3>Venda - Vhavhe</h3>
+                <audio src="/audio/Vhavhe.m4a" controls type="audio/m4a">Venda</audio>
+            </label>
+        </div>
+    </div>
+        <div class="level levelFour hidden">
+            <h1>you are done!</h1>
+        </div>
+
+    <div>Model response</div>
+
     <button type="button" onclick="init()">Start</button>
 
-    <div id="label-container"></div>
-    
-    <div class="level"></div>
+    <div id="label-container">
 
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    </div>
+
+
+    <br><br><br>
+
+    <button class="nextBtn" >Next</button>
+
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
     <script src="/checklevels.js"></script>
