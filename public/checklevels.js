@@ -28,9 +28,9 @@ const levelOne = {
 }
 
 const levelTwo = {
-"have_a_nice_day_sesotho" : false,
-"have_a_nice_day_venda" :  false,
-"have_a_nice_day_xhosa" :  false
+    "have_a_nice_day_sesotho" : false,
+    "have_a_nice_day_venda" :  false,
+    "have_a_nice_day_xhosa" :  false
 };
 
 const levelThree = {
@@ -56,7 +56,6 @@ function nextLevel() {
     showNextLevel();
 
 }
-
 
 const keepPropability = [];
 // console.log(keepPropability);
