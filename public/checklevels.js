@@ -66,21 +66,6 @@ function nextLevel() {
     showNextLevel();
 
 }
-// sound function
-// var mySound;
-// function sound(src) {
-//     this.sound = document.createElement("audio");
-//     this.sound.src = src;
-//     this.sound.setAttribute("controls", "none");
-//     this.sound.style.display = "none";
-//     document.body.appendChild(this.sound);
-//     this.play = function () {
-//         this.sound.play();
-//     }
-//     this.stop = function () {
-//         this.sound.pause();
-//     }
-//}
 async function init() {
     const recognizer = await createModel();
     const classLabels = recognizer.wordLabels(); // get class labels
@@ -93,13 +78,13 @@ async function init() {
     recognizer.listen(async result => {
         const scores = result.scores; // probability of prediction for each class
 
-
         const labelsWithScore = classLabels.map(function (className, index) {
             return {
                 className,
                 score: result.scores[index]
             }
         });
+
         console.log(labelsWithScore);
 
         const labelWithHighestScore = labelsWithScore.reduce(function (prev, current) {
@@ -111,26 +96,27 @@ async function init() {
 
         console.log(labelWithHighestScore);
 
-
         if (labelWithHighestScore.score > 0.7 && currentLevel[labelWithHighestScore.className] !== undefined) {
 
             labelContainer.innerHTML = labelWithHighestScore.className;
             currentScore++;
 
-            // playSound!
-            // mySound = new sound("sound.mp3");
             scoreElement.innerHTML = currentScore;
-            const success = new Audio('/audio/sound.mp3');
+            var error = new Audio('/audio/sound.mp3');
+            const success = new Audio('/audio/success.mp3');
+
+            errorElement.innerHTML = "Correct!";
+            errorElement.classList.add(".success");
+            success.play();
 
             if (currentScore === 3) {
-                success.play();
-                nextLevel();
-
+                errorElement.innerHTML = "Congratulations! You have completed this level";
             }
 
+        } else if(labelWithHighestScore.className === "Background Noise" && currentScore < 3){
+            errorElement.innerHTML = "Background Noise";
         } else {
-            // no that is not the correct word...
-            errorElement.innerHTML = "Not a correct word!";
+            errorElement.innerHTML = "Not A Correct Word!";
         }
     }, {
         includeSpectrogram: true, // in case listen should return result.spectrogram
