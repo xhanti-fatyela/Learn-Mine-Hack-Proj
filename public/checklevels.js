@@ -20,7 +20,6 @@ async function createModel() {
     return recognizer;
 }
 
-
 const levelOne = {
     "greet_in_sotho" : false,
     "greet_in_venda" : false,
@@ -126,7 +125,6 @@ async function init() {
             return "Not the correct word!"
         }
 
-
         // render the probability scores per class
         // for (let i = 0; i < classLabels.length; i++) {
         //     var classNames = classLabels[i];
@@ -166,9 +164,7 @@ async function init() {
     // setTimeout(() => recognizer.stopListening(), 20000);
 }
 
-
 // DOM Code
-
 const nextBtn = document.querySelector(".nextBtn");
 const levels = document.querySelectorAll(".level");
 

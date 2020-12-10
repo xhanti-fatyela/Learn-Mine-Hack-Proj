@@ -18,7 +18,7 @@
             </label>
         </div>
         <div>
-            <span class="counter"></span>
+            <span class="counter">0</span>
         </div>
     </div>
 
@@ -42,7 +42,7 @@
             </label>
         </div>
         <div>
-            <span class="counter"></span>
+            <span class="counter">0</span>
         </div>
     </div>
 
@@ -65,29 +65,28 @@
             </label>
         </div>
         <div>
-            <span class="counter"></span>
+            <span class="counter">0</span>
         </div>
     </div>
-        <div class="level levelFour hidden">
-            <h1>you are done!</h1>
-        </div>
-
-    
-    <div>Model response</div>
-    <button type="button" onclick="init()">Start</button>
-
-    <div id="label-container">
-
+    <div class="level levelFour hidden">
+        <h1>you are done!</h1>
     </div>
 
 
-    <br><br><br>
+    <div class="buttons">
+        <div>Model Response</div>
+        <button type="button" onclick="init()" style="display: inline-block; margin: 0 2em 0 0">Start</button>
+        <button class="nextBtn">Next</button>
 
-    <button class="nextBtn" >Next</button>
+        <div id="label-container">
 
-    
+        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script
         src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
     <script src="/checklevels.js"></script>
