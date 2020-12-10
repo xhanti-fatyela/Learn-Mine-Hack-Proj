@@ -28,20 +28,8 @@ app.get("/", function(req, res){
   res.render('index');
 });
 
-app.get("/isixhosa", async function(req, res){
-  res.render('isixhosa');
-});
-
-app.get("/zulu", async function(req, res){
-  res.render('zulu');
-});
-
-app.get("/sesotho", async function(req, res){
-  res.render('sesotho');
-});
-
-app.get("/venda", async function(req, res){
-  res.render("venda");
+app.get("/languages", async function(req, res){
+  res.render('languages');
 });
 
 let PORT = process.env.PORT || 2020;
