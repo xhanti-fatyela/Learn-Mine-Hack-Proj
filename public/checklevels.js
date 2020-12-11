@@ -131,11 +131,15 @@ async function init() {
 // DOM Code
 const nextBtn = document.querySelector(".nextBtn");
 const levels = document.querySelectorAll(".level");
+// TO DO --- hide buttons on last page
+// const hideOnElevelFour = document.querySelectorAll(".hideOnElevelFour");
 
 var showCounter = 0;
 
 function showNextLevel() {
     if (showCounter >= 4) {
+        // TO DO --- hide buttons on last page
+        // levels[showCounter].classList.add("hideOnElevelFour");
         return;
     }
 

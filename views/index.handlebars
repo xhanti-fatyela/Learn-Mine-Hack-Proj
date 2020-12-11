@@ -10,75 +10,105 @@
 		* {
 			margin: 0px;
 			padding: 0px;
-			font-family: 'Roboto', sans-serif;
-			text-align: center;
+			overflow: hidden;
+		}
+		body {
+			overflow: hidden;
+			background-image: url("/images/city.png");
+			background-attachment: fixed;
+			background-size: cover;
 		}
 
 		.container {
 			width: 100%;
 			height: 100vh;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/theBackground.jpg);
-			background-size: cover;
-			background-attachment: fixed;
+			background-color: #14698799;
 		}
 
 		.content {
 			color: white;
-			padding: 25em 0 0 0;
+			width: fit-content;
+			bottom: 0;
+			text-align: center;
+			margin: 40vh auto;
 		}
 
 		h1 {
 			color: white;
 			font-size: 50px;
+			font-style: italic;
 		}
 
 		p {
 			color: white;
 			font-size: 25px;
-			line-height: 15px;
+			font-style: italic;
 		}
 
 		button {
-			width: 180px;
-			color: #000;
-			font-size: 12px;
-			padding: 12px 0;
-			background: white;
+			font-size: 18px;
+			padding: 18px 100px;
+			background-color: #003c57;
+			color: #fff;
 			border: 0px;
-			border-radius: 20px;
+			border-radius: 25px;
 			outline: none;
 			margin-top: 30px;
 			cursor: pointer;
+			transition: 0.6s;
 		}
 		button:hover {
-			opacity: 0.7;
+			background: #044969;
 		}
-
-		h5 {
-			color: black;
-			text-shadow: 0 0 5px #999;
-			font-size: 20px;
+		nav {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			padding: 25px;
+			display: flex;
+			justify-content: flex-end;
 		}
-
-		a {
-			color: black;
+		nav h2:first-child{
+			margin-right: 28em;
+		}
+		nav h2 {
+			font-weight: 900;
+			margin: 0 3em;
+		}
+		footer {
+			position: absolute;
+			padding: 20px;
+			bottom: 0;
+			width: 100%;
+			background-color: #003c57;
+			color: #146987;
+			font-style: unset;
+			font-weight: bold;
 		}
 	</style>
 </head>
 
 <body>
 	<div class="container">
+		<nav>
+			<h2  class="start">learnMine</h2>
+			<h2>something</h2>
+			<h2>something</h2>
+		</nav>
 
 		<div class="content">
-			<h1>Welcome to the language Learning App</h1>
+			<h1>Learn Mine!</h1>
 			<br>
-			<p>You are in the right place to learn 11 official South African Languages</p>
+			<p>You are in the right place to learn 11 official South African languages</p>
 			<form action="/languages" method="get">
 				<button type="submit">Get Started</button>
 			</form>
 		</div>
-
+	<footer>
+		codeX December &copy; 2020 Hackathon
+	</footer>
 	</div>
+
 </body>
 
 </html>

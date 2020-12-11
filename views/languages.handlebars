@@ -1,4 +1,4 @@
-<div class="model" style="color: black;">
+<div class="model">
 
     <div class="level levelOne ">
         <h2>Level One</h2>
@@ -72,16 +72,20 @@
         </div>
     </div>
     <div class="level levelFour hidden">
-        <h1>Well Done! Completed!</h1>
+        <h1>Levels Completed. Well Done!</h1>
+        <form action="/" method="GET">
+            <button type="submit">HOME</button>
+        </form>
     </div>
 
 
     <div class="buttons">
-        <div>Model Response</div>
+        {{!-- <div>Model Response</div> --}}
         <button type="button" onclick="init()" style="display: inline-block; margin: 0 2em 0 0">Start</button>
         <button class="nextBtn">Next</button>
 
-        <div id="label-container">
+        {{!-- TO DO --- HIDE BUTTON ON 4TH STAGE --}}
+        <div class="hideOnElevelFour" id="label-container">
 
         </div>
 
