@@ -12,7 +12,7 @@ audio {
 }
 .audio {
 	display: flex;
-	font-size: small;
+	font-size: smaller;
 }
 .hidden {
 	display: none;
