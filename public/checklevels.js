@@ -116,7 +116,7 @@ async function init() {
         } else if(labelWithHighestScore.className === "Background Noise" && currentScore < 3){
             errorElement.innerHTML = "Background Noise";
         } else {
-            errorElement.innerHTML = "Not A Correct Word!";
+            errorElement.innerHTML = "Not A Correct Word!";currentLevel
         }
     }, {
         includeSpectrogram: true, // in case listen should return result.spectrogram
@@ -132,13 +132,14 @@ async function init() {
 const nextBtn = document.querySelector(".nextBtn");
 const levels = document.querySelectorAll(".level");
 // TO DO --- hide buttons on last page
-// const hideOnElevelFour = document.querySelectorAll(".hideOnElevelFour");
-
+const hideOnElevelFour = document.querySelectorAll(".hideOnElevelFour");
+currentLevel
 var showCounter = 0;
 
 function showNextLevel() {
-    if (showCounter >= 4) {
+    if (showCounter  === 4) {
         // TO DO --- hide buttons on last page
+        // levels[showCounter].classList.remove("hideOnElevelFour");
         // levels[showCounter].classList.add("hideOnElevelFour");
         return;
     }
