@@ -79,23 +79,24 @@ audio {
 	color: #003c57;
 	border: 1px solid #003c57;
 }
+
 @media only screen and (max-width: 600px) {
 	.audio {
 		display: block;
 		margin: 0 auto;
 		width: 100%;
-		border: 1px solid white;
 	}
+	.audio audio { width: 100%; display: block; }
 	.model {
 		padding: 0;
 		width: 80%;
-		margin: 0.5em auto;
+		/* max-height: 100vh; */
+		margin: 1em auto;
 		border-radius: 10px;
 		padding: 25px;
-		border: 1px solid yellow;
 	}
-	.level { border: 1px solid red; }
 	.navBtns {
 		display: flex;
+		justify-content: space-between;
 	}
 }
