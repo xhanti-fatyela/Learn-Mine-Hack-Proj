@@ -19,19 +19,7 @@ async function createModel() {
 
     return recognizer;
 }
-/*
 
-greet_in_sotho: 0.03
-greet_in_venda: 0.00
-greet_in_xhosa: 0.00
-have_a_nice_day_sesotho: 0.86
-have_a_nice_day_venda: 0.05
-have_a_nice_day_xhosa: 0.01
-how_are_you_sotho: 0.04
-how_are_you_venda: 0.00
-how_are_you_xhosa: 0.00
-
-*/
 const levelOne = {
     "greet_in_sotho": false,
     "greet_in_venda": false,
@@ -66,6 +54,7 @@ function nextLevel() {
     showNextLevel();
 
 }
+
 async function init() {
     const recognizer = await createModel();
     const classLabels = recognizer.wordLabels(); // get class labels
